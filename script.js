@@ -1,32 +1,30 @@
-function Strength(password) {
-  let i = 0;
-  if (password.length > 6) {
-    i++;
-  }
-  if (password.length >= 10) {
-    i++;
+function checkPasswordStrength(password) {
+  let strength = 0;
+
+  if (password.length >= 8) {
+    strength++;
   }
 
   if (/[A-Z]/.test(password)) {
-    i++;
+    strength++;
   }
 
   if (/[0-9]/.test(password)) {
-    i++;
+    strength++;
   }
 
   if (/[^\w]/.test(password)) {
-    i++;
+    strength++;
   }
 
-  return i;
+  return strength;
 }
 
-let container = document.querySelector(".container");
 document.addEventListener("keyup", function (e) {
   let password = document.querySelector("#YourPassword").value;
+  let strength = checkPasswordStrength(password);
 
-  let strength = Strength(password);
+  let container = document.querySelector(".container");
   if (strength <= 2) {
     container.classList.add("weak");
     container.classList.remove("moderate");
@@ -53,3 +51,17 @@ show.onclick = function () {
     show.classList.remove("hide");
   }
 };
+
+const button = document.querySelector('.generate-password-button');
+
+function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+function updateButtonColor() {
+  const color1 = getRandomColor();
+  const color2 = getRandomColor();
+  button.style.background = `linear-gradient(to right, ${color1}, ${color2})`;
+}
+
+setInterval(updateButtonColor, 2000); // update color every 2 seconds
