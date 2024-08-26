@@ -1,7 +1,7 @@
 function checkPasswordStrength(password) {
   let strength = 0;
 
-  if (password.length >= 8) {
+  if (password.length >= 12) {
     strength++;
   }
 
@@ -9,11 +9,19 @@ function checkPasswordStrength(password) {
     strength++;
   }
 
+  if (/[a-z]/.test(password)) {
+    strength++;
+  }
+
   if (/[0-9]/.test(password)) {
     strength++;
   }
 
-  if (/[^\w]/.test(password)) {
+  if (/[^\w\s]/.test(password)) {
+    strength++;
+  }
+
+  if (!/\s/.test(password)) {
     strength++;
   }
 
