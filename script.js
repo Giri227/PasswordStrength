@@ -1,3 +1,15 @@
+// Watermarking
+const watermark = "WHITE HAT WOLF";
+
+// Obfuscate the watermark
+const obfuscatedWatermark = watermark.split('').map(c => {
+  return String.fromCharCode(c.charCodeAt(0) + 1);
+}).join('');
+
+// Add the watermark as a comment
+console.log(`/* ${obfuscatedWatermark} */`);
+
+// Rest of the code remains the same...
 function checkPasswordStrength(password) {
   let strength = 0;
 
