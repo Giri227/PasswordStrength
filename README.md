@@ -14,7 +14,7 @@ JavaScript
 Project Live Location 🌐
 You can access the live version of this project at Password Strength Checker. Try it out and enhance your password security!
 
-📧 Get in Touch For inquiries, collaboration, or just to say hello, reach out to us at 📩whitehatwolf@gmail.com.
+📧 Get in Touch For inquiries, collaboration, or just to say hello, reach out to us at 📩whitehatwolf22@gmail.com.
 
 Thank You! 👏
 We appreciate you taking the time to explore our Password Strength Checker project. Your online security is our top priority, and we hope this tool helps you keep your accounts safe.
